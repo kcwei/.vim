@@ -1,5 +1,8 @@
 set nocompatible        " not compatible with the old-fashion vi mode
 
+""
+"" Plugin Management
+""
 " Auto install vim-plug if not exist
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -7,7 +10,6 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-" Plugin Management
 call plug#begin('~/.vim/plugged')
 
 Plug 'flazz/vim-colorschemes'
@@ -30,13 +32,19 @@ Plug 'vim-scripts/VisIncr'
 
 call plug#end()
 
-" Enable filetype and syntax
+""
+"" Enable filetype and syntax
+""
 syntax on               " enable syntax
 filetype on             " enable filetype detection
 filetype indent on      " enable filetype-specific indenting
 filetype plugin on      " enable filetype-specific plugins
 
-" General settings
+""
+"" General settings
+""
+colorscheme smyck
+
 set number              " show line number
 set ruler               " show the cursor position all the time
 set showtabline=2       " always show the tab line
@@ -51,19 +59,25 @@ set wildmenu            " turn on the wild menu
 set belloff=all         " turn off the error bell
 set mouse=a             " enable mouse support
 
-" Indent settings
+""
+"" Indent settings
+""
 set shiftwidth=2        " indent size is 2
 set softtabstop=2       " use 2 space to replace one tab
 set tabstop=4           " tab size is 4
 set expandtab           " use space to indent
 set autoindent          " auto indent to text
 
-" Search settings
+""
+"" Search settings
+""
 set hlsearch            " highlight search item
 set incsearch           " move the matched pattern while entering
 set ignorecase          " ignore the case while searching
 
-" File format and encodings
+""
+"" File format and encodings
+""
 set fileformats=unix,dos,mac
 set fileencodings=utf-8,big5
 set termencoding=utf-8
