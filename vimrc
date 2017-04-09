@@ -83,6 +83,15 @@ set fileencodings=utf-8,big5
 set termencoding=utf-8
 set encoding=utf-8
 
+""
+"" OS related
+""
+if has("win32")
+  set langmenu=zh_tw.utf-8
+  source $VIMRUNTIME/delmenu.vim
+  source $VIMRUNTIME/menu.vim
+endif
+
 " Display unwanted characters
 set list listchars=tab:_
 highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen ctermfg=white
