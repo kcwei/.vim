@@ -1,7 +1,7 @@
 set background=dark
 
 if has("win32")
-  set guifont=COonsolas:h14
+  set guifont=Consolas:h13
 elseif has("mac")
   set guifont=Inconsolata\ For\ Powerline:h16
 else
