@@ -28,7 +28,7 @@ Plug 'scrooloose/syntastic', { 'on': 'SyntasticCheck' }
 "Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
 
 Plug 'vim-scripts/VisIncr'
-"Plug 'sirver/ultisnips'
+Plug 'sirver/ultisnips'
 
 call plug#end()
 
@@ -43,7 +43,7 @@ filetype plugin on      " enable filetype-specific plugins
 ""
 "" General settings
 ""
-colorscheme smyck
+colorscheme molokai
 
 set number              " show line number
 set ruler               " show the cursor position all the time
@@ -57,7 +57,9 @@ set autoread            " auto read when file is changed outside
 set clipboard=unnamed   " bind system clipboard
 set wildmenu            " turn on the wild menu
 set belloff=all         " turn off the error bell
+
 set mouse=a             " enable mouse support
+set ttymouse=xterm2
 
 ""
 "" Indent settings
@@ -101,6 +103,7 @@ nmap <C-k> Hjzz
 nmap <C-j> Lkzz
 nmap <C-h> :tabprevious<CR>
 nmap <C-l> :tabnext<CR>
+nmap wgf <C-w>gf
 
 " Quick move for insert mode
 imap <C-k> <up>
@@ -129,7 +132,7 @@ nmap <F2> :NERDTreeTabsToggle<CR>
 ""
 "" Tagbar
 ""
-nmap <F3> :TagbarToggle<CR>
+nmap <F4> :TagbarToggle<CR>
 
 ""
 "" Lightline
@@ -192,7 +195,7 @@ let g:syntastic_python_flake8_args="--max-line-length=120"
 ""
 "" Ultisnip
 ""
-"let g:UltiSnipsExpandTrigger="<tab>"
-"let g:UltiSnipsJumpForwardTrigger="<tab>"
-"let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-"let g:UltiSnipsSnippetDirectories=["UltiSnips"]
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+let g:UltiSnipsSnippetDirectories=["UltiSnips"]
