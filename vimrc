@@ -49,9 +49,14 @@ set history=50          " keep 50 lines of command line history
 set autoread            " auto read when file is changed outside
 set clipboard=unnamed   " bind system clipboard
 set wildmenu            " turn on the wild menu
-set belloff=all         " turn off the error bell
 
-set mouse=a             " enable mouse support
+" turn off the error bell
+set noerrorbells
+set visualbell
+set t_vb=
+
+" enable mouse support
+set mouse=a
 set ttymouse=xterm2
 
 ""
