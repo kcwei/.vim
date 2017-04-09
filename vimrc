@@ -3,11 +3,7 @@ set nocompatible        " not compatible with the old-fashion vi mode
 ""
 "" Plugin Management
 ""
-if has("win32")
-  call plug#begin('~/vimfiles/plugged')
-else
-  call plug#begin('~/.vim/plugged')
-endif
+call plug#begin('~/.vim/plugged')
 
 Plug 'flazz/vim-colorschemes'
 
