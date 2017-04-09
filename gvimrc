@@ -1,5 +1,4 @@
 set background=dark
-colorscheme smyck
 
 set guifont=Inconsolata\ For\ Powerline:h16
 set columns=100
