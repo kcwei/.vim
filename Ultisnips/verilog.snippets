@@ -1,0 +1,64 @@
+snippet module "module"
+module $1
+(
+  $2
+);
+
+endmodule
+
+endsnippet
+
+snippet a* "always @*"
+always @*
+begin
+  ${VISUAL}$0
+end
+endsnippet
+
+snippet as "always @( posedge clk or negedge rst_n )"
+always @( posedge clk or negedge rst_n )
+begin
+  if ( !rst_n )
+  begin
+    $1 <= $2;
+  end
+  else if ( ${3:ce} )
+  begin
+    $1 <= $4;
+  end
+end
+endsnippet
+
+snippet init "initial"
+initial
+begin
+  $0
+end
+endsnippet
+
+snippet case "case"
+case ( $1 )
+  $0
+endcase
+endsnippet
+
+snippet begin "begin"
+begin
+  $0
+end
+endsnippet
+
+snippet if "if"
+if ( $1 )
+begin
+  $2 = $3;
+end
+else
+begin
+  $2 = $4;
+end
+endsnippet
+
+snippet lp "localparam"
+localparam $1 = $2;
+endsnippet
