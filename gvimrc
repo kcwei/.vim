@@ -8,7 +8,7 @@ if has("win32")
 elseif has("mac")
   set guifont=Inconsolata\ For\ Powerline:h16
 else
-  set guifont=Monoscope:h14
+  set guifont=Monospace\ 12
 endif
 
 set columns=100
