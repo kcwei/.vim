@@ -142,6 +142,7 @@ nmap N Nzzzv
 "" NERDTree
 ""
 nmap <F2> :NERDTreeTabsToggle<CR>
+let NERDTreeIgnore=['Thumbs.db', '__pycache__'] 
 
 ""
 "" Tagbar
