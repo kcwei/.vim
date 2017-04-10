@@ -104,6 +104,8 @@ set list listchars=tab:_
 highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen ctermfg=white
 :match ExtraWhitespace /\s\+$/
 
+autocmd BufWritePre * %s/\s\+$//e
+
 ""
 "" Key mapping
 ""
@@ -142,7 +144,7 @@ nmap N Nzzzv
 "" NERDTree
 ""
 nmap <F2> :NERDTreeTabsToggle<CR>
-let NERDTreeIgnore=['Thumbs.db', '__pycache__'] 
+let NERDTreeIgnore=['Thumbs.db', '__pycache__']
 
 ""
 "" Tagbar
