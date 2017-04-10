@@ -3,7 +3,13 @@ set nocompatible        " not compatible with the old-fashion vi mode
 ""
 "" Plugin Management
 ""
-call plug#begin('~/.vim/plugged')
+if has("win32")
+  let plug_path="~/vimfiles/plugged"
+else
+  let plug_path="~/.vim/plugged"
+endif
+
+call plug#begin(plug_path)
 
 Plug 'flazz/vim-colorschemes'
 
@@ -36,10 +42,11 @@ filetype plugin on      " enable filetype-specific plugins
 ""
 "" General settings
 ""
-colorscheme molokai
+colorscheme wombat256i
 
 set number              " show line number
 set ruler               " show the cursor position all the time
+set cursorline          " show cursor line
 set showtabline=2       " always show the tab line
 set showcmd             " show the command at the bottom
 set title               " set the terminal title

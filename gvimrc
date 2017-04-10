@@ -1,3 +1,6 @@
+
+colorscheme wombat256
+
 set background=dark
 
 if has("win32")
