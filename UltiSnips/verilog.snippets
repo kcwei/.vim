@@ -4,6 +4,8 @@ module $1
   $2
 );
 
+$0
+
 endmodule
 
 endsnippet
@@ -11,8 +13,10 @@ endsnippet
 snippet a* "always @*"
 always @*
 begin
-  ${VISUAL}$0
+  $1
 end
+
+$0
 endsnippet
 
 snippet as "always @( posedge clk or negedge rst_n )"
@@ -27,24 +31,28 @@ begin
     $1 <= $4;
   end
 end
+
+$0
 endsnippet
 
 snippet init "initial"
 initial
 begin
-  $0
+  $1
 end
+
+$0
 endsnippet
 
 snippet case "case"
 case ( $1 )
-  $0
+  $2
 endcase
 endsnippet
 
 snippet begin "begin"
 begin
-  $0
+  $1
 end
 endsnippet
 
@@ -61,4 +69,20 @@ endsnippet
 
 snippet lp "localparam"
 localparam $1 = $2;
+$0
+endsnippet
+
+snippet reg "reg"
+reg [$1:0] $2;
+$0
+endsnippet
+
+snippet func "function"
+function [${1:BW}:0] ${2:NAME};
+  $3
+
+begin
+  $4
+end
+endfunction
 endsnippet
